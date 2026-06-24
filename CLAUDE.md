@@ -10,6 +10,7 @@ UK launch of Houston Hot Chicken (HHC). Brand tokens below are taken from hhc.oo
   whenever the page collects email addresses from people in the UK.
 - State a one-line design plan (palette, fonts, layout concept, signature element) before coding.
 - Build mobile-first. Preview in the browser and screenshot at 375px and 1440px to self-check.
+- For brand story, voice, product and proof points (for copy), read `brand/BRAND-CONTEXT.md`.
 
 ## Brand tokens (from hhc.ooo/uk)
 - Primary: #e30513 (HHC red, the dominant heat colour: announce bar, highlights)
