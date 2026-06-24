@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Houston TX Hot Chicken is coming to the UK | Join the waitlist</title>
+<meta name="description" content="America's cult Nashville-style hot chicken brand is landing in the UK. Join the waitlist to be first to know where and when Houston TX Hot Chicken opens.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@400;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0e0e0e;
+    --bg-2:#171311;
+    --ink:#f9fbfd;
+    --ink-dim:#c7c2bd;
+    --ink-faint:#8d8884;
+    --red:#e30513;
+    --red-deep:#b00410;
+    --ember:#ff4823;
+    --orange:#fc5a00;
+    --gold:#fdd02b;
+    --line:#2a2522;
+    --radius:0.5em;
+    --radius-sm:0.35em;
+    --shadow:0 5px 25px rgba(0,0,0,.45);
+    --maxw:64rem;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Lato,sans-serif;
+    font-size:1.0625rem;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:Bitter,serif;
+    line-height:1.05;
+    margin:0 0 .4em;
+    text-transform:uppercase;
+    letter-spacing:.005em;
+  }
+  p{margin:0 0 1rem}
+  a{color:var(--ink)}
+  img{max-width:100%;display:block}
+
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+  .section{padding-block:clamp(3.5rem,9vw,6rem)}
+
+  /* Skip link */
+  .skip{position:absolute;left:-999px;top:0;background:var(--red);color:#fff;padding:.6em 1em;border-radius:var(--radius-sm);z-index:100}
+  .skip:focus{left:.5rem;top:.5rem}
+
+  /* Focus visibility (3:1+ against dark) */
+  a:focus-visible,button:focus-visible,input:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;isolation:isolate;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(120% 90% at 50% -10%, rgba(227,5,19,.38), transparent 55%),
+      radial-gradient(80% 60% at 80% 20%, rgba(252,90,0,.20), transparent 60%),
+      var(--bg);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(60% 50% at 50% 120%, rgba(253,208,43,.10), transparent 70%);
+  }
+  .hero .wrap{padding-block:clamp(4rem,11vw,7rem)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.6em;
+    font-weight:900;text-transform:uppercase;letter-spacing:.18em;
+    font-size:.8rem;color:var(--ink-dim);margin-bottom:1.4rem;
+  }
+  .eyebrow .dot{width:.55em;height:.55em;border-radius:50%;background:var(--red);box-shadow:0 0 12px 2px rgba(227,5,19,.8)}
+  .scribble{
+    font-family:'Rock Salt',cursive;text-transform:none;letter-spacing:0;
+    color:var(--ember);font-size:.9em;transform:rotate(-4deg);display:inline-block;
+  }
+  h1{
+    font-size:clamp(2.6rem,2rem + 6vw,5.5rem);
+    font-weight:900;
+    margin-bottom:.5rem;
+    text-shadow:0 2px 30px rgba(0,0,0,.4);
+  }
+  h1 .flame{
+    background:linear-gradient(95deg,var(--red),var(--ember) 55%,var(--orange));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{
+    font-size:clamp(1.05rem,1rem + .5vw,1.3rem);
+    color:var(--ink-dim);max-width:38ch;margin-bottom:2rem;
+  }
+  .cue{
+    display:inline-flex;align-items:center;gap:.5em;
+    border:1px solid var(--line);background:rgba(255,255,255,.03);
+    border-radius:100px;padding:.5em 1em;font-weight:700;
+    font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);
+    margin-bottom:2.2rem;
+  }
+  .cue .spark{color:var(--gold)}
+
+  /* ---------- FORM ---------- */
+  .signup{max-width:30rem}
+  .form-row{display:flex;flex-wrap:wrap;gap:.6rem}
+  .field{flex:1 1 14rem;min-width:0}
+  label.field-label{
+    display:block;font-weight:700;font-size:.9rem;margin-bottom:.4rem;color:var(--ink);
+  }
+  input[type="email"]{
+    width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+    background:#1c1714;border:1px solid var(--line);border-radius:var(--radius);
+    padding:.85em .95em;line-height:1.2;height:3.1em;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  input[type="email"]::placeholder{color:var(--ink-faint)}
+  input[type="email"]:hover{border-color:#473f3a}
+  input[type="email"]:focus{border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,72,35,.25);outline:none}
+  input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(227,5,19,.25)}
+
+  .btn{
+    font-family:Bitter,serif;font-weight:900;text-transform:uppercase;letter-spacing:.03em;
+    font-size:1.05rem;color:#fff;cursor:pointer;white-space:nowrap;
+    background:linear-gradient(180deg,var(--red),var(--red-deep));
+    border:1px solid var(--red);border-radius:var(--radius);
+    padding:0 1.4em;height:3.1em;display:inline-flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(227,5,19,.35);
+    transition:transform .12s ease,box-shadow .2s ease,filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.08);box-shadow:0 8px 26px rgba(227,5,19,.5)}
+  .btn:active{transform:translateY(1px)}
+  .form-row .btn{flex:0 0 auto;height:3.1em;align-self:flex-end}
+
+  .error{
+    color:#ff9b8f;font-size:.85rem;font-weight:700;margin:.5rem 0 0;min-height:1.2em;
+    display:flex;align-items:center;gap:.4em;
+  }
+  .error:empty{display:none}
+
+  .consent{display:flex;gap:.65em;align-items:flex-start;margin-top:1rem}
+  .consent input{
+    flex:0 0 auto;width:1.25em;height:1.25em;margin-top:.15em;accent-color:var(--red);cursor:pointer;
+  }
+  .consent label{font-size:.82rem;color:var(--ink-dim);line-height:1.5}
+  .consent a{color:var(--ink);text-decoration:underline}
+  .helper{font-size:.8rem;color:var(--ink-faint);margin:.7rem 0 0}
+
+  /* Success state */
+  .success{
+    display:none;border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(180deg,rgba(227,5,19,.12),rgba(255,72,35,.04));
+    padding:1.5rem;max-width:30rem;
+  }
+  .success.show{display:block;animation:pop .4s ease both}
+  .success h3{color:var(--ember);font-size:1.5rem;margin-bottom:.3em}
+  .success p{color:var(--ink-dim);margin-bottom:.4rem}
+  .success p:last-child{margin-bottom:0}
+  @keyframes pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+
+  /* ---------- HEAT LADDER (signature) ---------- */
+  .heat{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+  .section-head{max-width:42rem;margin-bottom:2.5rem}
+  .section-head h2{font-size:clamp(1.9rem,1.5rem + 2.5vw,3.2rem);font-weight:900}
+  .section-head p{color:var(--ink-dim)}
+  .kicker{
+    font-weight:900;text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;
+    color:var(--ember);margin-bottom:.8rem;
+  }
+
+  .ladder{display:grid;gap:.7rem;counter-reset:heat}
+  .rung{
+    position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:1rem 1.1rem;background:rgba(255,255,255,.02);
+    overflow:hidden;transition:transform .15s ease,border-color .15s ease;
+  }
+  .rung::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+    background:var(--heat,var(--red));
+  }
+  .rung:hover{transform:translateX(4px);border-color:#473f3a}
+  .rung .name{font-family:Bitter,serif;font-weight:700;text-transform:uppercase;font-size:1.05rem}
+  .rung .meta{color:var(--ink-faint);font-size:.85rem;margin-top:.1rem}
+  .rung .scoville{font-weight:900;color:var(--ink-dim);font-size:.9rem;text-align:right;white-space:nowrap}
+  .flames{font-size:1rem;line-height:1;letter-spacing:.1em}
+  .flames span[aria-hidden]{filter:grayscale(.1)}
+  .rung.peak{
+    border-color:var(--red);
+    background:linear-gradient(110deg,rgba(227,5,19,.22),rgba(252,90,0,.10));
+    box-shadow:inset 0 0 40px rgba(255,72,35,.12);
+  }
+  .rung.peak .name{color:#fff}
+  .rung.peak::before{background:linear-gradient(180deg,var(--gold),var(--red))}
+  .waiver{
+    display:inline-block;margin-top:.35rem;font-size:.7rem;font-weight:900;letter-spacing:.1em;
+    text-transform:uppercase;color:#0e0e0e;background:var(--gold);
+    padding:.2em .6em;border-radius:100px;
+  }
+
+  /* ---------- WHAT TO EXPECT ---------- */
+  .expect ul.menu{list-style:none;margin:0 0 2rem;padding:0;display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+  .expect ul.menu li{
+    border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem;
+    background:rgba(255,255,255,.02);font-weight:700;
+  }
+  .expect ul.menu li span{display:block;font-weight:400;color:var(--ink-faint);font-size:.85rem;margin-top:.15rem}
+  .partner{
+    display:flex;align-items:center;gap:.8em;flex-wrap:wrap;
+    border-top:1px solid var(--line);padding-top:1.6rem;color:var(--ink-dim);
+  }
+  .partner strong{color:var(--ink)}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{position:relative;text-align:center;overflow:hidden}
+  .final::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(80% 120% at 50% 0%,rgba(227,5,19,.30),transparent 60%),var(--bg);
+  }
+  .final h2{font-size:clamp(1.9rem,1.5rem + 3vw,3.4rem);font-weight:900}
+  .final p{color:var(--ink-dim);max-width:34ch;margin-inline:auto;margin-bottom:2rem}
+  .final .signup,.final .success{margin-inline:auto;text-align:left}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding-block:2.5rem;color:var(--ink-faint)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:space-between}
+  .brandmark{font-family:Bitter,serif;font-weight:900;text-transform:uppercase;color:var(--ink);font-size:1.1rem;letter-spacing:.02em}
+  .brandmark .tx{color:var(--red)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:1.2rem;font-size:.85rem;font-weight:700}
+  .foot-links a{color:var(--ink-dim);text-decoration:none}
+  .foot-links a:hover{color:var(--ink)}
+  .legal{flex-basis:100%;font-size:.78rem;color:var(--ink-faint);line-height:1.5}
+
+  /* ---------- Load reveal ---------- */
+  .reveal{opacity:0;transform:translateY(16px);animation:rise .7s ease forwards}
+  .reveal[data-d="1"]{animation-delay:.05s}
+  .reveal[data-d="2"]{animation-delay:.15s}
+  .reveal[data-d="3"]{animation-delay:.25s}
+  .reveal[data-d="4"]{animation-delay:.35s}
+  .reveal[data-d="5"]{animation-delay:.45s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  @media (max-width:520px){
+    .form-row{flex-direction:column;align-items:stretch}
+    .form-row .btn{width:100%;align-self:stretch}
+    .rung{grid-template-columns:auto 1fr;gap:.7rem}
+    .rung .scoville{grid-column:2;text-align:left;margin-top:.2rem}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#signup">Skip to sign-up</a>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow reveal" data-d="1"><span class="dot" aria-hidden="true"></span>Houston TX Hot Chicken <span class="scribble">now landing in the UK</span></p>
+    <h1 class="reveal" data-d="2">America's cult hot chicken is <span class="flame">coming to the UK</span></h1>
+    <p class="lede reveal" data-d="3">Nashville-style heat across every level, from the Las Vegas brand with nearly 400,000 fans. Join the waitlist to be first to know where and when we open.</p>
+    <p class="cue reveal" data-d="3"><span class="spark" aria-hidden="true">&#9733;</span> Opening in the UK, 2026</p>
+
+    <!-- Signup form -->
+    <form class="signup reveal" data-d="4" id="signup" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label class="field-label" for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email"
+                 placeholder="you@email.co.uk" required
+                 aria-describedby="email-error email-helper">
+        </div>
+        <button class="btn" type="submit">Sign me up</button>
+      </div>
+      <p class="error" id="email-error" role="alert" aria-live="polite"></p>
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">Yes, I'd like Houston TX Hot Chicken to email me news and launch updates. You can unsubscribe at any time. See our <a href="#privacy">Privacy Policy</a>.</label>
+      </div>
+      <p class="helper" id="email-helper">No spam. Unsubscribe at any time.</p>
+    </form>
+
+    <!-- Success state (revealed on submit) -->
+    <div class="success" id="success" role="status" aria-live="polite" tabindex="-1">
+      <h3>You're on the list.</h3>
+      <p>You'll be first to hear where and when Houston TX Hot Chicken opens in the UK.</p>
+      <p>Keep an eye on your inbox. The heat is coming.</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ===================== HEAT LADDER (signature) ===================== -->
+<section class="section heat" aria-labelledby="heat-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">The whole heat range</p>
+      <h2 id="heat-title">How hot can you go?</h2>
+      <p>Our Original Hot Chicken Sandwich climbs from a gentle warm-up to a waiver-required inferno. Pick your level. Or don't, and find out the hard way.</p>
+    </div>
+
+    <ol class="ladder" aria-label="Heat levels from mildest to hottest">
+      <li class="rung" style="--heat:#fdd02b">
+        <span class="flames" aria-hidden="true">&#127798;</span>
+        <span><span class="name">No Heat</span><span class="meta">All the flavour, none of the fear</span></span>
+        <span class="scoville">0 SHU</span>
+      </li>
+      <li class="rung" style="--heat:#fc9d00">
+        <span class="flames" aria-hidden="true">&#128293;</span>
+        <span><span class="name">Mild</span><span class="meta">A friendly first date with the heat</span></span>
+        <span class="scoville">2,500 SHU</span>
+      </li>
+      <li class="rung" style="--heat:#fc5a00">
+        <span class="flames" aria-hidden="true">&#128293;&#128293;</span>
+        <span><span class="name">Medium</span><span class="meta">Now we're talking</span></span>
+        <span class="scoville">15,000 SHU</span>
+      </li>
+      <li class="rung" style="--heat:#f13c00">
+        <span class="flames" aria-hidden="true">&#128293;&#128293;&#128293;</span>
+        <span><span class="name">Hot</span><span class="meta">Order a lemonade. Trust us.</span></span>
+        <span class="scoville">100,000 SHU</span>
+      </li>
+      <li class="rung" style="--heat:#e30513">
+        <span class="flames" aria-hidden="true">&#128293;&#128293;&#128293;&#128293;</span>
+        <span><span class="name">Extra Hot</span><span class="meta">Regret is part of the experience</span></span>
+        <span class="scoville">500,000 SHU</span>
+      </li>
+      <li class="rung peak" style="--heat:#e30513">
+        <span class="flames" aria-hidden="true">&#9888;&#65039;</span>
+        <span>
+          <span class="name">Houston, We Have a Problem!</span>
+          <span class="meta">Our viral 2 million Scoville challenge</span>
+          <span class="waiver">Waiver required</span>
+        </span>
+        <span class="scoville">2,000,000 SHU</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== WHAT TO EXPECT ===================== -->
+<section class="section expect" aria-labelledby="expect-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">What's on the menu</p>
+      <h2 id="expect-title">More than a sandwich</h2>
+      <p>An unapologetically bold menu built on craveable food and electric energy.</p>
+    </div>
+    <ul class="menu">
+      <li>Original Hot Chicken Sandwich<span>Across every heat level</span></li>
+      <li>Tenders &amp; Waffles<span>Sweet meets serious heat</span></li>
+      <li>Loaded Fries<span>Piled high, dialled up</span></li>
+      <li>House Sauce<span>The famous one</span></li>
+      <li>Nuggets<span>For the table, or just you</span></li>
+      <li>House-made Lemonades<span>You'll need them</span></li>
+    </ul>
+    <p class="partner"><strong>Brought to the UK with PizzaExpress.</strong> Our cult fast-casual brand, their unmatched knowledge of the British high street.</p>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section final" aria-labelledby="final-title">
+  <div class="wrap">
+    <h2 id="final-title">Be first through the door</h2>
+    <p>Locations and opening dates drop to the waitlist first. Don't miss them.</p>
+
+    <form class="signup" id="signup-2" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label class="field-label" for="email-2">Email address</label>
+          <input type="email" id="email-2" name="email" autocomplete="email" inputmode="email"
+                 placeholder="you@email.co.uk" required
+                 aria-describedby="email-error-2 email-helper-2">
+        </div>
+        <button class="btn" type="submit">Sign me up</button>
+      </div>
+      <p class="error" id="email-error-2" role="alert" aria-live="polite"></p>
+      <div class="consent">
+        <input type="checkbox" id="consent-2" name="consent" required>
+        <label for="consent-2">Yes, I'd like Houston TX Hot Chicken to email me news and launch updates. You can unsubscribe at any time. See our <a href="#privacy">Privacy Policy</a>.</label>
+      </div>
+      <p class="helper" id="email-helper-2">No spam. Unsubscribe at any time.</p>
+    </form>
+    <div class="success" id="success-2" role="status" aria-live="polite" tabindex="-1">
+      <h3>You're on the list.</h3>
+      <p>You'll be first to hear where and when Houston TX Hot Chicken opens in the UK.</p>
+      <p>Keep an eye on your inbox. The heat is coming.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <span class="brandmark">Houston <span class="tx">TX</span> Hot Chicken</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/" rel="noopener">TikTok</a>
+      <a href="https://www.hhc.ooo">hhc.ooo</a>
+    </nav>
+    <p class="legal">&copy; 2026 Houston TX Hot Chicken. Coming to the UK in partnership with PizzaExpress. All natural, all heat.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Basic, forgiving email check. Real validation happens server-side.
+  var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function wireForm(formId, emailId, errId, successId){
+    var form = document.getElementById(formId);
+    if(!form) return;
+    var email = document.getElementById(emailId);
+    var err = document.getElementById(errId);
+    var success = document.getElementById(successId);
+    var consent = form.querySelector('input[type="checkbox"]');
+
+    function setError(msg){
+      err.textContent = msg ? '⚠ ' + msg : '';
+      email.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    }
+
+    // Inline validation on blur; preserve input, specific message.
+    email.addEventListener('blur', function(){
+      var v = email.value.trim();
+      if(v && !EMAIL.test(v)) setError('Please enter a valid email address, like you@email.co.uk.');
+      else setError('');
+    });
+    email.addEventListener('input', function(){
+      if(email.getAttribute('aria-invalid') === 'true' && EMAIL.test(email.value.trim())) setError('');
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = email.value.trim();
+      if(!v){ setError('Enter your email address to join the waitlist.'); email.focus(); return; }
+      if(!EMAIL.test(v)){ setError('Please enter a valid email address, like you@email.co.uk.'); email.focus(); return; }
+      if(consent && !consent.checked){ setError('Please tick the box to confirm you are happy to hear from us.'); consent.focus(); return; }
+      setError('');
+      // Success: swap form for the confirmation, move focus to it.
+      form.style.display = 'none';
+      success.classList.add('show');
+      success.focus();
+    });
+  }
+
+  wireForm('signup','email','email-error','success');
+  wireForm('signup-2','email-2','email-error-2','success-2');
+})();
+</script>
+</body>
+</html>
