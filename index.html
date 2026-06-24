@@ -115,14 +115,22 @@
     font-size:clamp(1.05rem,1rem + .5vw,1.3rem);
     color:var(--ink-dim);max-width:38ch;margin-bottom:2rem;
   }
-  .cue{
-    display:inline-flex;align-items:center;gap:.5em;
-    border:1px solid var(--line);background:rgba(255,255,255,.03);
-    border-radius:100px;padding:.5em 1em;font-weight:700;
-    font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);
-    margin-bottom:2rem;
+  /* Hazard warning stamp (replaces the generic rounded pill cue) */
+  .stamp{
+    display:inline-flex;align-items:stretch;gap:0;margin-bottom:2rem;
+    transform:rotate(-2.5deg);transform-origin:left center;
+    border:2px solid var(--gold);border-radius:3px;overflow:hidden;
+    font-family:Bitter,serif;font-weight:900;text-transform:uppercase;
   }
-  .cue .spark{color:var(--gold)}
+  .stamp .hazard{
+    width:1.6em;flex:0 0 auto;
+    background:repeating-linear-gradient(-45deg,var(--gold) 0 6px,#0e0e0e 6px 12px);
+  }
+  .stamp .stamp__text{
+    padding:.45em .85em;letter-spacing:.14em;font-size:.78rem;color:var(--gold);
+    background:rgba(253,208,43,.06);display:flex;align-items:center;
+  }
+  .stamp b{color:var(--ink);font-weight:900}
 
   /* ---------- FORM ---------- */
   .signup{max-width:30rem}
@@ -142,17 +150,18 @@
   input[type="email"]:focus{border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,72,35,.25);outline:none}
   input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(227,5,19,.25)}
 
+  /* Flat hard-edged "sticker" button (replaces the glossy gradient + glow) */
   .btn{
-    font-family:Bitter,serif;font-weight:900;text-transform:uppercase;letter-spacing:.03em;
+    font-family:Bitter,serif;font-weight:900;text-transform:uppercase;letter-spacing:.04em;
     font-size:1.05rem;color:#fff;cursor:pointer;white-space:nowrap;
-    background:linear-gradient(180deg,var(--red),var(--red-deep));
-    border:1px solid var(--red);border-radius:var(--radius);
+    background:var(--red);
+    border:2px solid var(--ink);border-radius:var(--radius-sm);
     padding:0 1.4em;height:3.1em;display:inline-flex;align-items:center;justify-content:center;
-    box-shadow:0 6px 20px rgba(227,5,19,.35);
-    transition:transform .12s ease,box-shadow .2s ease,filter .2s ease;
+    box-shadow:4px 4px 0 0 var(--gold);
+    transition:transform .1s ease,box-shadow .1s ease,background-color .15s ease;
   }
-  .btn:hover{filter:brightness(1.08);box-shadow:0 8px 26px rgba(227,5,19,.5)}
-  .btn:active{transform:translateY(1px)}
+  .btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 0 var(--gold)}
+  .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 0 var(--gold)}
   .form-row .btn{flex:0 0 auto;height:3.1em;align-self:flex-end}
 
   .error{
@@ -206,8 +215,17 @@
   .rung .name{font-family:Bitter,serif;font-weight:700;text-transform:uppercase;font-size:1.05rem}
   .rung .meta{color:var(--ink-faint);font-size:.85rem;margin-top:.1rem}
   .rung .scoville{font-weight:900;color:var(--ink-dim);font-size:.9rem;text-align:right;white-space:nowrap}
-  .flames{font-size:1rem;line-height:1;letter-spacing:.1em}
-  .flames span[aria-hidden]{filter:grayscale(.1)}
+  /* Bespoke Scoville gauge (replaces emoji flames) */
+  .gauge{display:inline-flex;align-items:flex-end;gap:3px;height:1.6em;width:auto}
+  .gauge i{width:5px;border-radius:1px 1px 0 0;background:#332c28;display:block}
+  .gauge i:nth-child(1){height:32%}
+  .gauge i:nth-child(2){height:45%}
+  .gauge i:nth-child(3){height:58%}
+  .gauge i:nth-child(4){height:71%}
+  .gauge i:nth-child(5){height:84%}
+  .gauge i:nth-child(6){height:100%}
+  .gauge i.on{background:var(--heat,var(--red))}
+  .rung.peak .gauge i.on{box-shadow:0 0 7px var(--heat);background:var(--gold)}
   .rung.peak{
     border-color:var(--red);
     background:linear-gradient(110deg,rgba(227,5,19,.22),rgba(252,90,0,.10));
@@ -285,7 +303,7 @@
     <p class="eyebrow reveal" data-d="1"><span class="dot" aria-hidden="true"></span>Houston TX Hot Chicken <span class="scribble">now landing in the UK</span></p>
     <h1 class="reveal" data-d="2">America's cult hot chicken is <span class="flame">coming to the UK</span></h1>
     <p class="lede reveal" data-d="3">Nashville-style heat across every level, from the Las Vegas brand with nearly 400,000 fans. Join the waitlist to be first to know where and when we open.</p>
-    <p class="cue reveal" data-d="3"><span class="spark" aria-hidden="true">&#9733;</span> Opening in the UK, 2026</p>
+    <p class="stamp reveal" data-d="3"><span class="hazard" aria-hidden="true"></span><span class="stamp__text">Extreme heat incoming &nbsp;&middot;&nbsp; <b>UK 2026</b></span></p>
 
     <!-- Signup form -->
     <form class="signup reveal" data-d="4" id="signup" novalidate>
@@ -327,32 +345,32 @@
 
     <ol class="ladder" aria-label="Heat levels from mildest to hottest">
       <li class="rung" style="--heat:#fdd02b">
-        <span class="flames" aria-hidden="true">&#127798;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span>
         <span><span class="name">No Heat</span><span class="meta">All the flavour, none of the fear</span></span>
         <span class="scoville">0 SHU</span>
       </li>
       <li class="rung" style="--heat:#fc9d00">
-        <span class="flames" aria-hidden="true">&#128293;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span>
         <span><span class="name">Mild</span><span class="meta">A friendly first date with the heat</span></span>
         <span class="scoville">2,500 SHU</span>
       </li>
       <li class="rung" style="--heat:#fc5a00">
-        <span class="flames" aria-hidden="true">&#128293;&#128293;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
         <span><span class="name">Medium</span><span class="meta">Now we're talking</span></span>
         <span class="scoville">15,000 SHU</span>
       </li>
       <li class="rung" style="--heat:#f13c00">
-        <span class="flames" aria-hidden="true">&#128293;&#128293;&#128293;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
         <span><span class="name">Hot</span><span class="meta">Order a lemonade. Trust us.</span></span>
         <span class="scoville">100,000 SHU</span>
       </li>
       <li class="rung" style="--heat:#e30513">
-        <span class="flames" aria-hidden="true">&#128293;&#128293;&#128293;&#128293;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
         <span><span class="name">Extra Hot</span><span class="meta">Regret is part of the experience</span></span>
         <span class="scoville">500,000 SHU</span>
       </li>
       <li class="rung peak" style="--heat:#e30513">
-        <span class="flames" aria-hidden="true">&#9888;&#65039;</span>
+        <span class="gauge" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
         <span>
           <span class="name">Houston, We Have a Problem!</span>
           <span class="meta">Our viral 2 million Scoville challenge</span>
